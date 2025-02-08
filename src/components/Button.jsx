@@ -11,17 +11,17 @@ function Button({ text, color, onClick }) {
   );
 }
 
-// ✅ Add PropTypes for validation
+
 Button.propTypes = {
-  text: PropTypes.string.isRequired,   // 'text' must be a string and is required
-  color: PropTypes.string,             // 'color' must be a string
-  onClick: PropTypes.func,             // 'onClick' should be a function
+  text: PropTypes.string.isRequired,   
+  color: PropTypes.string,             
+  onClick: PropTypes.func,             
 };
 
-// ✅ Default props (in case not provided)
+
 Button.defaultProps = {
-  color: "bg-gray-500 text-white",     // Default button color
-  onClick: () => {},                   // Default empty function
+  color: "bg-gray-500 text-white",    
+  onClick: () => {},                 
 };
 
 export default Button;
