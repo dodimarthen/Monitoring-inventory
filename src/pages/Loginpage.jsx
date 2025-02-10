@@ -3,7 +3,7 @@ import testImage from "../assets/test.webp";
 
 function LoginPage() {
   return (
-    <div className="flex items-center justify-center h-screen bg-green-500">
+    <div className="flex items-center justify-center h-screen bg-black-200">
       <div className="bg-white shadow-lg rounded-xl flex overflow-hidden w-[800px] h-[450px]">
         {/* Left Side: Image with Hover Zoom Effect */}
         <div className="w-1/2 flex items-center justify-center bg-gray-200 group overflow-hidden">
