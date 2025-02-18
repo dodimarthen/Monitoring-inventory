@@ -1,29 +1,33 @@
 import PropTypes from "prop-types";
 
-export default function Card({ title, description, link }) {
+export default function Card({ title, icon, number, bgColor }) {
   return (
     <a
-      href={link || "#"}
-      className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+      className="flex flex-col max-w-sm p-6 border border-gray-200 rounded-lg shadow-sm hover:opacity-90"
+      style={{ backgroundColor: bgColor }}
     >
-      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        {title}
-      </h5>
-      <p className="font-normal text-gray-700 dark:text-gray-400">
-        {description}
-      </p>
+  
+      <h5 className="text-lg font-semibold text-white mb-4 text-center">{title}</h5>
+
+
+      <div className="flex items-center justify-between">
+    
+        <img src={icon} alt={title} className="w-16 h-16" />
+
+
+        <span className="text-5xl font-bold text-white ml-4">{number}</span>
+      </div>
     </a>
   );
 }
 
-
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  link: PropTypes.string,
+  icon: PropTypes.string.isRequired, 
+  number: PropTypes.number.isRequired, 
+  bgColor: PropTypes.string, 
 };
 
-
 Card.defaultProps = {
-  link: "#",
+  bgColor: "#FFFFFF",
 };
